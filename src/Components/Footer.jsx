@@ -1,5 +1,5 @@
 
-import LogoNobg from '../assets/LogoNoBg.png'
+import LogoNobg from '../assets/LogoNoBG.png'
 import FB from '../assets/facebook.png'
 import Insta from '../assets/instagram.png'
 import LinkedIn from '../assets/linkedin.png'
