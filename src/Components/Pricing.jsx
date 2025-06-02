@@ -1,13 +1,15 @@
 import { useState } from "react"
+import Tick from '../assets/check.png'
+import Cross from '../assets/cross.png'
 
 const Pricing = () => {
 
     const [isYearly, setIsYearly] = useState(false)
 
     const packages = [
-        {name: "Basic", monthyPrice:499, yearlyPrice:4999, description: "This is our Basic plan with various advantages for students with low cost", tick: "./src/assets/check.png", cross: './src/assets/cross.png'},
-        {name: "Intermediate", monthyPrice:799, yearlyPrice:8499, description: "Intermediate plan comes with many features to help students learn more in easier way", tick: "./src/assets/check.png", cross: './src/assets/cross.png'},
-        {name: "Advanced", monthyPrice:999, yearlyPrice:10499, description: "This is our special plan includes additional features with value added services", tick: "./src/assets/check.png", cross: './src/assets/cross.png'},
+        {name: "Basic", monthyPrice:499, yearlyPrice:4999, description: "This is our Basic plan with various advantages for students with low cost"},
+        {name: "Intermediate", monthyPrice:799, yearlyPrice:8499, description: "Intermediate plan comes with many features to help students learn more in easier way"},
+        {name: "Advanced", monthyPrice:999, yearlyPrice:10499, description: "This is our special plan includes additional features with value added services"},
     ]
 
   return (
@@ -42,11 +44,11 @@ const Pricing = () => {
                             {isYearly ? `Rs.${pkg.yearlyPrice}` : `Rs.${pkg.monthyPrice}`}<span className="text-base text-black font-medium">/{isYearly ? "year" : "month"}</span>
                         </p>
                         <ul className="mt-6 space-y-3 ml-2 pb-3">
-                            <li className="flex gap-4"><img src={pkg.tick} alt="" className="size-6"/>Videos of lessons</li>
-                            <li className="flex gap-4"><img src={pkg.tick} alt="" className="size-6"/>Homework check</li>
-                            <li className="flex gap-4"><img src={pkg.tick} alt="" className="size-6"/>Additional practical task</li>
-                            <li className="flex gap-4"><img src={pkg.tick} alt="" className="size-6"/>Monthly conferences</li>
-                            <li className="flex gap-4"><img src={isYearly ? pkg.tick : pkg.cross} alt="" className="size-6"/>Personal tips from trainers</li>
+                            <li className="flex gap-4"><img src={Tick} alt="" className="size-6"/>Videos of lessons</li>
+                            <li className="flex gap-4"><img src={Tick} alt="" className="size-6"/>Homework check</li>
+                            <li className="flex gap-4"><img src={Tick} alt="" className="size-6"/>Additional practical task</li>
+                            <li className="flex gap-4"><img src={Tick} alt="" className="size-6"/>Monthly conferences</li>
+                            <li className="flex gap-4"><img src={isYearly ? Tick : Cross} alt="" className="size-6"/>Personal tips from trainers</li>
                         </ul>
                         <div className="items-center flex pb-10">
                             <button className="bg-blue-600 text-white py-3 rounded mt-8 px-7 mx-auto text-center cursor-pointer hover:bg-green-500 transition-all duration-300">Get Started</button>
